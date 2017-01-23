@@ -1,0 +1,9 @@
+<h3>Website Links AND Their Descriptions</h3>
+
+<ul class="columns large-6">
+  <% results.each do |post| %>
+    <li><a href=<%= post["url"] %>><%= post["title"].capitalize %></a>  -  <%= post["description"].capitalize %></li>
+  <% end %>
+</ul>
+
+<div class="transfer"><a href="/articles/new">Post a Link</a></div>

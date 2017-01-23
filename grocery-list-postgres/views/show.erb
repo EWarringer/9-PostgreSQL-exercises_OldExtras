@@ -1,0 +1,15 @@
+
+<h1><%= grocery["name"] %></h1>
+<ul>
+  <% reviews.each do |review| %>
+    <li>
+      <%= review["body"] %>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/groceries/<%= grocery["id"] %>/reviews" method="post">
+  <input type="text" name="body" style="width:250px" required/>
+  <input type="submit" value = "Post Comment"/>
+</form>
+<a href="/groceries"> Back to List </a>

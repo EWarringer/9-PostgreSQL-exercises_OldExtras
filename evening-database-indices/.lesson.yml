@@ -1,0 +1,8 @@
+---
+title: "Database Indices"
+type: "challenge"
+description: "Use database indices to speed up SQL queries"
+visibility: "assign"
+tags: "sql, indexing"
+ignore:
+- "evening-database-indices.md"

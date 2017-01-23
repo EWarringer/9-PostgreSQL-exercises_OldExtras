@@ -1,0 +1,17 @@
+<h1> Grocery List <h1>
+
+<ul>
+  <% groceries.each do |food| %>
+    <li>
+      <a href="/groceries/<%= food["id"] %>"><%= food["name"] %></a>
+      <form method="post" action="/groceries/<%= :id %>">
+        <button type="hidden" name="_method" value="delete" type="button">Delete</button>
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/groceries" method="post">
+  <input type="text" name="name" required/>
+  <input type="submit" value="Add Grocery"/>
+</form>
